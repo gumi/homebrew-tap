@@ -10,37 +10,37 @@ class SecretEnvManager < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/gumi/secret-env-manager/releases/download/2023.12.06/secret-env-manager_Darwin_arm64.tar.gz"
-      sha256 "dd0c4e2e2b9523fdb313bbbe5b0bb15c3846a5caf4f93e38c90b9b9054151fbb"
+      sha256 "d81e399d535192b3996a63301cca8a76b5649cea4c93e3bb89a6bcb1d52abfd8"
 
       def install
-        bin.install "secret-env-manager"
+        bin.install "sem"
       end
     end
     if Hardware::CPU.intel?
       url "https://github.com/gumi/secret-env-manager/releases/download/2023.12.06/secret-env-manager_Darwin_x86_64.tar.gz"
-      sha256 "6341c89b9a681537f3f4bb2d986a492ae4b984e0edd1b62f13fe708e65a0bf7b"
+      sha256 "539eab7b7c39b8d4502d3fe70a82a641c522496aba0310843b063d1814f338fb"
 
       def install
-        bin.install "secret-env-manager"
+        bin.install "sem"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/gumi/secret-env-manager/releases/download/2023.12.06/secret-env-manager_Linux_x86_64.tar.gz"
-      sha256 "9578bb68b18e0b17555d28847c8ca25d8b1b9bf78b3a9467a5fc3238cb625d93"
-
-      def install
-        bin.install "secret-env-manager"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/gumi/secret-env-manager/releases/download/2023.12.06/secret-env-manager_Linux_arm64.tar.gz"
-      sha256 "b5b965a052b1522a0e99a729ff0ab7fee3d13939094a0c3d86cff4c9161ae39f"
+      sha256 "96f7ab95e44054161174a0120d1fc6d7102757b01d104533d03eb49051a4e65f"
 
       def install
-        bin.install "secret-env-manager"
+        bin.install "sem"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/gumi/secret-env-manager/releases/download/2023.12.06/secret-env-manager_Linux_x86_64.tar.gz"
+      sha256 "cc5484a2e55121147abe6ecfbdc7bc071b903f035e7731f18c571012ef18a8f6"
+
+      def install
+        bin.install "sem"
       end
     end
   end
