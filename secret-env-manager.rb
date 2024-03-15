@@ -5,20 +5,20 @@
 class SecretEnvManager < Formula
   desc ""
   homepage ""
-  version "2024.03.13"
+  version "2024.03.15"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/gumi/secret-env-manager/releases/download/2024.03.13/secret-env-manager_Darwin_x86_64.tar.gz"
-      sha256 "9d07b8f95249c25c8d4b35735b637acb9c15d6fb46d92cda2348f0308a3be539"
+    if Hardware::CPU.arm?
+      url "https://github.com/gumi/secret-env-manager/releases/download/2024.03.15/secret-env-manager_Darwin_arm64.tar.gz"
+      sha256 "1c82e88c86e3c2e603d384b7516833508b79812de2404d368450cccd5b4abc4a"
 
       def install
         bin.install "sem"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/gumi/secret-env-manager/releases/download/2024.03.13/secret-env-manager_Darwin_arm64.tar.gz"
-      sha256 "32f45819ae4f906d483a83d2bebfa7474580fd7349461183a1d349a7f5217480"
+    if Hardware::CPU.intel?
+      url "https://github.com/gumi/secret-env-manager/releases/download/2024.03.15/secret-env-manager_Darwin_x86_64.tar.gz"
+      sha256 "35c0d4b68b439f5e6c77088f0dde84dcd9110acc5c7fcde45ce68f8b7703f35b"
 
       def install
         bin.install "sem"
@@ -28,16 +28,16 @@ class SecretEnvManager < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gumi/secret-env-manager/releases/download/2024.03.13/secret-env-manager_Linux_arm64.tar.gz"
-      sha256 "08c74b16b51b22f6bf359d2a3dbe1a5083316bbb9a4616726b74572393d46683"
+      url "https://github.com/gumi/secret-env-manager/releases/download/2024.03.15/secret-env-manager_Linux_arm64.tar.gz"
+      sha256 "4d5aea701cdd5b4b2a337cbb4b284fa7ba2c464f5424801adb50c329d8051bf4"
 
       def install
         bin.install "sem"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gumi/secret-env-manager/releases/download/2024.03.13/secret-env-manager_Linux_x86_64.tar.gz"
-      sha256 "f833a747bd78979c0dc64aa9f037372244b8d8bb2c9af2173c74fe54b99ab4ca"
+      url "https://github.com/gumi/secret-env-manager/releases/download/2024.03.15/secret-env-manager_Linux_x86_64.tar.gz"
+      sha256 "895e5e8416463b95d3f381c6a7508a34d9296dcef791118b8a4655a57d3a77e9"
 
       def install
         bin.install "sem"
