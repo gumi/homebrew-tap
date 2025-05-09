@@ -5,20 +5,20 @@
 class SecretEnvManager < Formula
   desc ""
   homepage ""
-  version "1.0.1"
+  version "1.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gumi/secret-env-manager/releases/download/1.0.1/secret-env-manager_Darwin_x86_64.zip"
-      sha256 "8434b1a062b90be1aeca9c3fafc0ac4e2da8075891940b1970d1d10551c287c2"
+      url "https://github.com/gumi/secret-env-manager/releases/download/1.0.2/secret-env-manager_Darwin_x86_64.zip"
+      sha256 "561ea5226d36a508e3f9a77720186e9b5d5f2a55f73a3917c6484cbeca6fb70f"
 
       def install
         bin.install "sem"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gumi/secret-env-manager/releases/download/1.0.1/secret-env-manager_Darwin_arm64.zip"
-      sha256 "0918cbd4388b4ac0a84a4528e91ced5b83b4c76450310146a3e6b2a6e021665a"
+      url "https://github.com/gumi/secret-env-manager/releases/download/1.0.2/secret-env-manager_Darwin_arm64.zip"
+      sha256 "726e3d4b2c99f627e0d7ff72250344b424f3e26cb9ec98f00068fb1fb21ddc5d"
 
       def install
         bin.install "sem"
@@ -28,15 +28,15 @@ class SecretEnvManager < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/gumi/secret-env-manager/releases/download/1.0.1/secret-env-manager_Linux_x86_64.zip"
-      sha256 "09d3fe2a65169adbe730c7bea6d8bdef7537571f48f19a29b4ab5d6f285d9ca0"
+      url "https://github.com/gumi/secret-env-manager/releases/download/1.0.2/secret-env-manager_Linux_x86_64.zip"
+      sha256 "b870ea8cd08be6994548f77634d49f2128eba66ad5f59e581a7fa71d17a56da6"
       def install
         bin.install "sem"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/gumi/secret-env-manager/releases/download/1.0.1/secret-env-manager_Linux_arm64.zip"
-      sha256 "221ca8ac485b79d88289ddf59f8dad26670821e8e0e2cb66cae3043600ee9cb1"
+      url "https://github.com/gumi/secret-env-manager/releases/download/1.0.2/secret-env-manager_Linux_arm64.zip"
+      sha256 "bdc0d4a10c0b6d1039b46bcb667ededc73c99086053b6f450f5cc6c89af5920c"
       def install
         bin.install "sem"
       end
